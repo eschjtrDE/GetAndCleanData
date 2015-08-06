@@ -2,6 +2,7 @@
 Getting and Cleaning Data Course Project
 
 This repository conatins three files:
+
 1. README.md : explains how the script works (this file)
 2. CodeBook.md: describes the variables, the data, and transformations preformed on the original data.
 3. run_analysis.R: contains the R code for creating the tidy data 

@@ -1,3 +1,4 @@
+# load library
 library(plyr)
 library(dplyr)
 
@@ -16,26 +17,30 @@ features <- read.table("./UCI_HAR_Dataset/features.txt",nrows = 561, header = FA
 # Merge the training and the test sets
 set <- rbind(train_set,test_set)
 
-#Extract only the measurements on the mean and standard deviation for each measurement 
+# Extract only the measurements on the mean and standard deviation for each measurement 
 features <- features[,2]
 mean_std_features <- grepl(".*(-)(mean|std)(\\().*",x = features)
 features <- features[mean_std_features]
 set <- set[,mean_std_features]
 
-#Use descriptive activity names to name the activities in the data set
+# Use descriptive activity names to name the activities in the data set
 act <- rbind(train_act, test_act)
 act <- as.factor(act[,1])
 set$activity <- mapvalues(act, from = levels(act_lables[,1]), to =levels(act_lables[,2]))
 
-#Appropriately labels the data set with descriptive variable names. 
+# Appropriately labels the data set with descriptive variable names. 
 names(set) <- c(features,"activity")
 
-#creates a second, independent tidy data set with
-#the average of each variable for each activity and each subject.
+
+# find the average of each variable for each activity and each subject.
+
+# add subject information to data
 subject <- rbind(train_sub,test_sub)
 set$subject <- as.factor(subject[,1])
+# summarise columns average by activity and subject
 df <- tbl_df(set)
 result <- df %>% group_by(activity,subject) %>%  summarise_each(funs(mean))
+# rename columns with preffix "Average_"
 colnames(result) <- paste("Average", colnames(result), sep = "_")
 colnames(result)[1] <- "Activity"
 colnames(result)[2] <- "Subject"

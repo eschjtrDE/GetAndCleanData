@@ -1,16 +1,13 @@
 This project uses data from the Center for Machine Learning and Intelligent Systems at the University of California, Irvine.
 
-==================================================================
-Human Activity Recognition Using Smartphones Dataset
-Version 1.0
+Human Activity Recognition Using Smartphones Dataset (Version 1.0)
 ==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Universit‡ degli Studi di Genova.
+DITEN - Universit√† degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
-==================================================================
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
@@ -31,10 +28,10 @@ The variables
 
 3-68	-	"Average_...":	This group of variables contains information from the sensor signals.
 				Each contains the average of all the values for a specific feature for one subject and one activity.
-				
 				66 specific features were chosen from 561 features in the original data.
 				They represent the mean and standard deviation of 33 sensor signals
 				(they contain the strings 'mean()' and 'std()' accordingly):
+	
 										
 				tBodyAcc-XYZ (X3)
 				tGravityAcc-XYZ (X3)
@@ -54,7 +51,8 @@ The variables
 				fBodyGyroMag
 				fBodyGyroJerkMag
 
-				The following section explains what the variable names mean.
+
+The following section explains what the variable names mean.
 
 
 Feature Selection 

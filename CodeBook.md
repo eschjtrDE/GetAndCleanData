@@ -33,19 +33,19 @@ The variables
 				(they contain the strings 'mean()' and 'std()' accordingly):
 	
 										
-				tBodyAcc-XYZ (X3)
-				tGravityAcc-XYZ (X3)
-				tBodyAccJerk-XYZ (X3)
-				tBodyGyro-XYZ (X3)
-				tBodyGyroJerk-XYZ (X3)
+				tBodyAcc-XYZ (3 variables)
+				tGravityAcc-XYZ (3 variables)
+				tBodyAccJerk-XYZ (3 variables)
+				tBodyGyro-XYZ (3 variables)
+				tBodyGyroJerk-XYZ (3 variables)
 				tBodyAccMag
 				tGravityAccMag
 				tBodyAccJerkMag
 				tBodyGyroMag
 				tBodyGyroJerkMag
-				fBodyAcc-XYZ (X3)
-				fBodyAccJerk-XYZ (X3)
-				fBodyGyro-XYZ (X3)
+				fBodyAcc-XYZ (3 variables)
+				fBodyAccJerk-XYZ (3 variables)
+				fBodyGyro-XYZ (3 variables)
 				fBodyAccMag
 				fBodyAccJerkMag
 				fBodyGyroMag
